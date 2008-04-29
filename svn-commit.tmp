@@ -1,0 +1,4 @@
+make trunk
+--이 줄 이하는 자동으로 제거됩니다--
+
+A    svn+ssh://wkpark@kldp.net/svnroot/kts/kts/trunk
