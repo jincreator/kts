@@ -34,7 +34,7 @@ dnl Check for st_blksize in struct stat
 
 #dnl internationalization macros
 #AM_GNU_GETTEXT
-AC_OUTPUT([Makefile src/Makefile dict/Makefile tools/Makefile misc/Makefile],
+AC_OUTPUT([Makefile src/Makefile dict/Makefile tools/Makefile misc/Makefile misc/Evaluation/Makefile misc/GetLEXFEATURE/Makefile misc/GetUNKNOWNFREQ/Makefile ],
     [])
 #   [chmod +x src/hello])
 

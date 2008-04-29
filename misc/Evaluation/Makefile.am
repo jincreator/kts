@@ -8,4 +8,4 @@
 
 bin_PROGRAMS = ncomp newcomp calcmore
 
-INCLUDES = -I../include
+INCLUDES = -I../../include

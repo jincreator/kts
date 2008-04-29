@@ -6,6 +6,6 @@
 # jhlee@csone.kaist.ac.kr, shlee2@adam.kaist.ac.kr
 #
 
-bin_PROGRAMS = gettagseq
+bin_PROGRAMS = getonepttn
 
-INCLUDES = -I../include
+INCLUDES = -I../../include

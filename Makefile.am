@@ -21,4 +21,4 @@
 #       putsem Semantic/dict.semNEC kts_dict
 # --- Ό³Έν ³‘ ---
 EXTRA_DIST = README.kts
-SUBDIRS = src dict tools misc
+SUBDIRS = src dict tools misc misc/Evaluation misc/GetLEXFEATURE misc/GetUNKNOWNFREQ
