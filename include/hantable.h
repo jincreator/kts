@@ -1,7 +1,7 @@
 /*******************************************************/
 /*    이 table은 hantbl.h의 내용을 변경한 것이다.      */
 /*    원 table은 하나의 자음만으로 이루어진 글자가     */
-/*    있을때, 그것을 초성에 mapping을 시켜서나 이것은  */
+/*    있을때, 그것을 초성에 mapping을 시켰으나 이것은  */
 /*    종성에 mapping을 시킨다. (KSC2C_S만 변경하고,    */
 /*    KSC2S_C는 원래 것임.)                            */
 /*          변경자 : 이 상호(shlee)                    */
@@ -15,7 +15,7 @@
  *	of single letteres sorted as their order.	*
  *							*
  *	 	by Cho, Young Hwan.  KAIST, KOREA	*
- *		Email 	choyh@csdsun.kaist.kr.ac	*
+ *		Email 	choyh@csdsun.kaist.ac.kr	*
  *				4/01/1990		*
  ********************************************************/
 #define KEY_SIZE 	40
@@ -111,7 +111,7 @@ int KSC2S_C[KEY_SIZE][2] = {
 };
 
 int KSC2CS[KSC_SIZE][2] = {
-0xA841,0xB0A1,
+0xA841,0xB0A1, /* B0A1 == 가 */
 0xA842,0xB0A2,
 0xA845,0xB0A3,
 0xA848,0xB0A4,

@@ -21,7 +21,10 @@ dnl Checks for libraries.
 
 dnl Checks for header files.
 #AC_STDC_HEADERS
-AC_HAVE_HEADERS(dbm.h db1/db.h)
+AC_HAVE_HEADERS(ndbm.h)
+AC_HAVE_HEADERS(db.h)
+AC_HAVE_HEADERS(db3/db.h)
+AC_HAVE_HEADERS(db4/db.h)
 
 dnl Checks for library functions.
 #AC_FUNC_ALLOCA

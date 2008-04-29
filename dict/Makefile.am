@@ -4,9 +4,9 @@
 #
 #
 bin_PROGRAMS = mkdict lkdict excdict getdict putsem putmarker predict chkcon
-LDADD = ../src/libkts.a -lndbm
+LDADD = ../src/libkts.a -ldb
 DEPENDENCIES=../src/libkts.a
-AM_CFLAGS = -O2 -I/usr/include/db1 -I../include #-DDEBUG
+AM_CFLAGS = -O2 -I/usr/include -I../include #-DDEBUG
 
 dict:
 	./mkdict	total.dict	kts_dict

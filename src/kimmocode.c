@@ -306,12 +306,15 @@ int type;
 
     if (value = binsrch(KSC2CS, KSC_SIZE, src, type))
         return value;
+    // 테이블은 순서대로 되어 있으므로, 같은 테이블을 써서
+    // 바이너리 서치할 수 있다.
+    
     if (type == S2C) {
-        if (value = binsrch(KSC2S_C, KEY_SIZE, src, 1))
+        if (value = binsrch(KSC2S_C, KEY_SIZE, src, 1)) // S2C == 1
             return value;
     }
     if (type == C2S) {
-        if (value = binsrch(KSC2C_S, KEY_SIZE, src, 0))
+        if (value = binsrch(KSC2C_S, KEY_SIZE, src, 0)) // C2S == 0
             return value;
     }
     return ERROR;

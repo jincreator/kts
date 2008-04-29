@@ -1,6 +1,6 @@
 bin_PROGRAMS = ktspell ktsdemo ktsdemo2 ktsdemo3
 
-LDADD = libkts.a -lndbm
+LDADD = libkts.a -ldb
 DEPENDENCIES=libkts.a
 
 INCLUDES = -I../include
@@ -52,7 +52,7 @@ libkts_a_SOURCES = kts.c ktsmoran.c ktstagger.c ktsformat.c ktsunknown.c \
 
 #CFLAGS = -DUNKNOWNMODEL2 -DBASELING1 -DBASELING2 -DANALYSIS
 
-AM_CFLAGS = -O2 -DUNKNOWNMODEL3 -DBASELING1 -DBASELING2 -I../include -I/usr/include/db1
+AM_CFLAGS = -O2 -DUNKNOWNMODEL3 -DBASELING1 -DBASELING2 -I../include -I/usr/include
 
 test:
 	export KDICT_PATH=../dict;./ktspell <../corpus/UnTagged/barun

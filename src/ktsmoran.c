@@ -12,13 +12,27 @@
  * ktsmoran.c ( Korean POS Tagging System : Morphological Analyzer ) *
  *                                                                   *
  *-------------------------------------------------------------------*/
+#ifdef HAVE_CONFIG_H
+# include <config.h>
+#endif
+
+#define DB_DBM_HSEARCH 1
+#ifdef HAVE_DB_H
+#  include <db.h>
+#elif defined HAVE_DB4_DB_H
+#  include <db4/db.h>
+#elif defined HAVE_DB3_DB_H
+#  include <db3/db.h>
+#elif defined HAVE_NDBM_H
+#  include <ndbm.h>
+#endif
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <memory.h>
 #include <fcntl.h>
-#include <ndbm.h>
+
 #include "ktsdefs.h"      /* Definitions                 */
 #define __TAGSET__
 #include "ktstbls.h"      /* Korean Tag Tables           */

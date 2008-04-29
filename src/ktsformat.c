@@ -12,6 +12,9 @@
  * ktsoutput.c ( Korean POS Tagging System : Output )               *
  *                                                                  *
  *------------------------------------------------------------------*/
+#ifdef HAVE_CONFIG_H
+# include <config.h>
+#endif
 
 #include <stdio.h>
 #include <string.h>
@@ -503,7 +506,7 @@ char separator ;        /* 분석 결과를 출력하고 쓰는 글자 */
 
   GetMorphTag(pathPool,idx,hanstr,tagstr,&eoj_sp) ; 
   fprintf(stream,"%s/%s",hanstr,tagstr) ; 
-  if (separator != NULL) putc(separator,stream) ; 
+  if (separator != (int)NULL) putc(separator,stream) ; 
 
   /* 마지막 형태소 다음 ' ' 혹은 '\n' */
 

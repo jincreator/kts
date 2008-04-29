@@ -13,12 +13,27 @@
  *                                                                      *
  *----------------------------------------------------------------------*/
 
+#ifdef HAVE_CONFIG_H
+# include <config.h>
+#endif
+
+#define DB_DBM_HSEARCH 1
+#ifdef HAVE_DB_H
+#  include <db.h>
+#elif defined HAVE_DB4_DB_H
+#  include <db4/db.h>
+#elif defined HAVE_DB3_DB_H
+#  include <db3/db.h>
+#elif defined HAVE_NDBM_H
+#  include <ndbm.h>
+#endif
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
 #include <memory.h>
 #include <stdlib.h>
-#include <ndbm.h>
+
 #include "ktsdefs.h"
 #include "ktsds.h"
 #include "ktstbls.h"
@@ -80,6 +95,7 @@ PRIVATE int CheckEndings()        ; /* X is in {조사,어미,접사} ?  */
 PRIVATE int CheckSuffix()         ; /* 접사가 있는가 조사          */
 PRIVATE double UnknownProb()      ; /* Unknown Word의 Lexical Prob */
 PRIVATE int LingFltr()            ; /* 마지막 음절을 조사하는 모듈 */
+PRIVATE int IsInTbl()             ;
 
 /*
  * Open Class Word : nct : 시간성 보통 명사

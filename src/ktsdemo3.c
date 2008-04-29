@@ -12,10 +12,25 @@
  * ktsdemo2.c (Korean POS Tagging System Demo Program - II)      *
  *                                                               *
  *---------------------------------------------------------------*/
+#ifdef HAVE_CONFIG_H
+# include <config.h>
+#endif
+
+#define DB_DBM_HSEARCH 1
+#ifdef HAVE_DB_H
+#  include <db.h>
+#elif defined HAVE_DB4_DB_H
+#  include <db4/db.h>
+#elif defined HAVE_DB3_DB_H
+#  include <db3/db.h>
+#elif defined HAVE_NDBM_H
+#  include <ndbm.h>
+#endif
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <db1/ndbm.h>
+
 #include "ktsdefs.h"
 #include "kts.h"
 #include "ktsds.h"

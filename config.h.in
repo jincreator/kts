@@ -1,16 +1,22 @@
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
-/* Define to 1 if you have the <db1/db.h> header file. */
-#undef HAVE_DB1_DB_H
+/* Define to 1 if you have the <db3/db.h> header file. */
+#undef HAVE_DB3_DB_H
 
-/* Define to 1 if you have the <dbm.h> header file. */
-#undef HAVE_DBM_H
+/* Define to 1 if you have the <db4/db.h> header file. */
+#undef HAVE_DB4_DB_H
+
+/* Define to 1 if you have the <db.h> header file. */
+#undef HAVE_DB_H
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <ndbm.h> header file. */
+#undef HAVE_NDBM_H
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
