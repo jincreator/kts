@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 main(argc,argv)
@@ -12,12 +13,12 @@ char *argv[] ;
   bef_str[0] = '\0'  ;
 
   if (argc != 2) {
-	printf(stderr,"Usage : plus file-name\n") ; 
+	fprintf(stderr,"Usage : plus file-name\n") ; 
 	exit(1) ; 
   }
 
   if ((fptr = fopen(argv[1],"r")) == NULL) {
-	printf(stderr,"Error : can't open %s\n",argv[1]) ; 
+	fprintf(stderr,"Error : can't open %s\n",argv[1]) ; 
     exit(1) ; 
   }
 
