@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define MAXLINE 9000
@@ -13,7 +14,7 @@ FILE *fpres, *fptag;
 int o_num = 0 ; 
 int x_num = 0 ; 
 
-void main(argc , argv)
+int main(argc , argv)
 int argc     ; 
 char *argv[] ; 
 {
@@ -38,8 +39,8 @@ char *argv[] ;
         if (fgets(res, MAXLINE - 1 , fpres)== NULL) break;
         if (fgets(tag, MAXLINE - 1 , fptag)== NULL) break;
 
-        if (tag[strlen(tag)- 1]== '\n') tag[strlen(tag)- 1]= NULL; 
-        if (res[strlen(res)- 1]== '\n') res[strlen(res)- 1]= NULL; 
+        if (tag[strlen(tag)- 1]== '\n') tag[strlen(tag)- 1]= (char)NULL; 
+        if (res[strlen(res)- 1]== '\n') res[strlen(res)- 1]= (char)NULL; 
         if (res[0]== 'o') ototal++;
         if (res[0]== 'x') xtotal++;
         rp= 2;
@@ -61,5 +62,6 @@ char *argv[] ;
    
     printf("o : total= %d, diff= %d\n", ototal, o_dif);
     printf("x : total= %d, diff= %d\n", xtotal, x_dif);
+    return 0;
 }
 
